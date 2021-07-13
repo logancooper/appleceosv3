@@ -1,0 +1,19 @@
+${title}
+
+<ul>
+    ${data.map(executive => 
+        `<li><a href="/${executive.slug}">${executive.name}</a></li>`
+        ).join("")}
+</ul>
+
+<form action="/" method="POST">
+    <label>
+        new CEO name
+        <input type="text" name="ceo_name" placeholder="CEO Name"/>
+    </label>
+    <label>
+        Starting Year
+        <input type="number" name="ceo_year" placeholder="Year the CEO started"/>
+    </label>
+    <button type="submit">Add CEO</button>
+</form>
